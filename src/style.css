@@ -1,5 +1,78 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+h1{
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+#domain{
+    background: linear-gradient(135deg, #bf3bce 0%, #f5576c 100%) ;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6;
+    box-shadow: 0 10px 25px rgba(245, 87, 108, 0.3);
+    transition: transform 0.3s ease;
+}
+
+#domain:hover{
+    transform: scale(1.02);
+}
+
+.container-fluid{
     background: white;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    width: 100%;
+    animation: fadeIn 0.6s ease-in;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px){
+    .container-fluid{
+        padding: 30px 25px;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+    #excuse{
+        font-size: 1.1rem;
+        padding: 25px;
+    }
 }
